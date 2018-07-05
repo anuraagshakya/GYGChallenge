@@ -11,6 +11,7 @@ import UIKit
 class ListViewDataSource: NSObject, UITableViewDataSource {
     var data = [Review]() {
         didSet {
+            // Invoke onDataUpdated every time data is set
             onDataUpdated()
         }
     }

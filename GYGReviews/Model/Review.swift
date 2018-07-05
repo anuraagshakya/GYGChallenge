@@ -8,6 +8,7 @@
 
 import Foundation
 
+// Struct to hold all required returned information of a review
 struct Review {
     let author: String
     let date: String

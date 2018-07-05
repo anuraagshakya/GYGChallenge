@@ -6,10 +6,9 @@
 //  Copyright © 2018 Bhunte. All rights reserved.
 //
 
-
-// Sort
 import Foundation
 
+// Sort
 enum SortOrder {
     case Ascending, Descending
 }
@@ -28,8 +27,8 @@ struct Sort {
         switch criteria {
         case .Rating:
             output += "rating"
-        default:
-            return nil
+        case .ReviewDate:
+            output += "date_of_review"
         }
         
         return output

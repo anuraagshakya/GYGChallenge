@@ -17,10 +17,9 @@ class ListViewModel {
     }
     
     public func fetchReviews(max: Int = 20, withFilter: Filter? = nil, sortedBy: Sort = Sort(criteria: .ReviewDate, order: .Descending)) {
-        var urlString = ""
-        let urlBaseString = "https://www.getyourguide.com/berlin-l17/tempelhof-2-hour-airport-history-tour-berlin-airlift-more-t23776/reviews.json?"
+        var urlString = "https://www.getyourguide.com/berlin-l17/tempelhof-2-hour-airport-history-tour-berlin-airlift-more-t23776/reviews.json?"
         
-        urlString += urlBaseString + "count=" + String(describing: max) + "&"
+        urlString += "count=" + String(describing: max) + "&"
         
         if let filter = withFilter {
             if let filterString = filter.filterString() {

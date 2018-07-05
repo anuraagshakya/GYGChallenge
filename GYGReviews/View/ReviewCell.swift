@@ -15,6 +15,9 @@ class ReviewCell: UITableViewCell {
     @IBOutlet weak var title: UILabel!
     @IBOutlet weak var author: UILabel!
     
+    
+    // All the setup for a ReviewCell is done in the setter for the review
+    //  property.
     var review: Review? {
         didSet {
             guard let review = review else {
@@ -36,16 +39,4 @@ class ReviewCell: UITableViewCell {
             author?.text = review.author
         }
     }
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-
 }
