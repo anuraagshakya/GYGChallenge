@@ -14,10 +14,10 @@
 		CE1D45F620EE211B00D5ABEA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE1D45F520EE211B00D5ABEA /* Assets.xcassets */; };
 		CE1D45F920EE211B00D5ABEA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE1D45F720EE211B00D5ABEA /* LaunchScreen.storyboard */; };
 		CE1D460220EE270400D5ABEA /* Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1D460120EE270400D5ABEA /* Review.swift */; };
-		CE1D460620EE2C1700D5ABEA /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1D460520EE2C1700D5ABEA /* DetailViewController.swift */; };
 		CE1D460820EE2C7200D5ABEA /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1D460720EE2C7200D5ABEA /* ListViewModel.swift */; };
 		CE1D460A20EE3CA500D5ABEA /* RequestCriteria.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1D460920EE3CA500D5ABEA /* RequestCriteria.swift */; };
 		CE40294D20EE550000645396 /* ListViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE40294C20EE550000645396 /* ListViewDataSource.swift */; };
+		CE40294F20EE66DB00645396 /* ReviewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE40294E20EE66DB00645396 /* ReviewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,10 +32,10 @@
 		CE1D45F820EE211B00D5ABEA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CE1D45FA20EE211B00D5ABEA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE1D460120EE270400D5ABEA /* Review.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Review.swift; sourceTree = "<group>"; };
-		CE1D460520EE2C1700D5ABEA /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		CE1D460720EE2C7200D5ABEA /* ListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModel.swift; sourceTree = "<group>"; };
 		CE1D460920EE3CA500D5ABEA /* RequestCriteria.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestCriteria.swift; sourceTree = "<group>"; };
 		CE40294C20EE550000645396 /* ListViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewDataSource.swift; sourceTree = "<group>"; };
+		CE40294E20EE66DB00645396 /* ReviewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,7 +113,7 @@
 			isa = PBXGroup;
 			children = (
 				CE1D45F020EE211800D5ABEA /* ListViewController.swift */,
-				CE1D460520EE2C1700D5ABEA /* DetailViewController.swift */,
+				CE40294E20EE66DB00645396 /* ReviewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -244,8 +244,8 @@
 				CE1D45EF20EE211800D5ABEA /* AppDelegate.swift in Sources */,
 				CE1D460A20EE3CA500D5ABEA /* RequestCriteria.swift in Sources */,
 				CE1D460220EE270400D5ABEA /* Review.swift in Sources */,
-				CE1D460620EE2C1700D5ABEA /* DetailViewController.swift in Sources */,
 				CE40294D20EE550000645396 /* ListViewDataSource.swift in Sources */,
+				CE40294F20EE66DB00645396 /* ReviewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

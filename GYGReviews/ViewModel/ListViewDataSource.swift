@@ -25,8 +25,8 @@ class ListViewDataSource: NSObject, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "ReviewCell", for: indexPath)
-        cell.textLabel?.text = data[indexPath.row].title
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ReviewCell", for: indexPath) as! ReviewCell
+        cell.review = data[indexPath.row]
         return cell
     }
 }
