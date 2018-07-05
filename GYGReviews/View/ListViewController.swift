@@ -27,7 +27,16 @@ class ListViewController: UITableViewController {
         }
         tableView.dataSource = self.dataSource
         
-        viewModel.fetchReview(max: 20, withFilter: Filter(criteria: .Rating, rule: .Equals, value: "5.0"), sortedBy: Sort(criteria: .ReviewDate, order: .Descending))
+        // Add button to let user write a new review
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addReviewPressed))
+        
+        viewModel.fetchReviews(max: 20, withFilter: Filter(criteria: .Rating, rule: .Equals, value: "5.0"), sortedBy: Sort(criteria: .ReviewDate, order: .Descending))
+    }
+    
+    @objc func addReviewPressed() {
+        let view = storyboard?.instantiateViewController(withIdentifier: "newReview") as! NewReviewViewController
+        view.title = "Submit a Review"
+        navigationController?.pushViewController(view, animated: true)
     }
 
     override func didReceiveMemoryWarning() {

@@ -16,7 +16,7 @@ class ListViewModel {
         self.dataSource = dataSource
     }
     
-    public func fetchReview(max: Int = 20, withFilter: Filter? = nil, sortedBy: Sort = Sort(criteria: .ReviewDate, order: .Descending)) {
+    public func fetchReviews(max: Int = 20, withFilter: Filter? = nil, sortedBy: Sort = Sort(criteria: .ReviewDate, order: .Descending)) {
         var urlString = ""
         let urlBaseString = "https://www.getyourguide.com/berlin-l17/tempelhof-2-hour-airport-history-tour-berlin-airlift-more-t23776/reviews.json?"
         

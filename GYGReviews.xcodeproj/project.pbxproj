@@ -18,6 +18,8 @@
 		CE1D460A20EE3CA500D5ABEA /* RequestCriteria.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1D460920EE3CA500D5ABEA /* RequestCriteria.swift */; };
 		CE40294D20EE550000645396 /* ListViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE40294C20EE550000645396 /* ListViewDataSource.swift */; };
 		CE40294F20EE66DB00645396 /* ReviewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE40294E20EE66DB00645396 /* ReviewCell.swift */; };
+		CE40295120EE74A900645396 /* NewReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE40295020EE74A900645396 /* NewReviewViewController.swift */; };
+		CE40295320EE874800645396 /* NewReviewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE40295220EE874800645396 /* NewReviewViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +38,8 @@
 		CE1D460920EE3CA500D5ABEA /* RequestCriteria.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestCriteria.swift; sourceTree = "<group>"; };
 		CE40294C20EE550000645396 /* ListViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewDataSource.swift; sourceTree = "<group>"; };
 		CE40294E20EE66DB00645396 /* ReviewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewCell.swift; sourceTree = "<group>"; };
+		CE40295020EE74A900645396 /* NewReviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewReviewViewController.swift; sourceTree = "<group>"; };
+		CE40295220EE874800645396 /* NewReviewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewReviewViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +118,7 @@
 			children = (
 				CE1D45F020EE211800D5ABEA /* ListViewController.swift */,
 				CE40294E20EE66DB00645396 /* ReviewCell.swift */,
+				CE40295020EE74A900645396 /* NewReviewViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -122,6 +127,7 @@
 			isa = PBXGroup;
 			children = (
 				CE1D460720EE2C7200D5ABEA /* ListViewModel.swift */,
+				CE40295220EE874800645396 /* NewReviewViewModel.swift */,
 				CE40294C20EE550000645396 /* ListViewDataSource.swift */,
 			);
 			path = ViewModel;
@@ -240,8 +246,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE1D460820EE2C7200D5ABEA /* ListViewModel.swift in Sources */,
+				CE40295320EE874800645396 /* NewReviewViewModel.swift in Sources */,
 				CE1D45F120EE211800D5ABEA /* ListViewController.swift in Sources */,
 				CE1D45EF20EE211800D5ABEA /* AppDelegate.swift in Sources */,
+				CE40295120EE74A900645396 /* NewReviewViewController.swift in Sources */,
 				CE1D460A20EE3CA500D5ABEA /* RequestCriteria.swift in Sources */,
 				CE1D460220EE270400D5ABEA /* Review.swift in Sources */,
 				CE40294D20EE550000645396 /* ListViewDataSource.swift in Sources */,
