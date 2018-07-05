@@ -9,24 +9,16 @@
 import Foundation
 
 struct Review {
+    let author: String
+    let date: String
+    let dateUnformatted: String
+    let foreignLanguage: Bool
     let languageCode: String
     let message: String
-    let rating: Double
+    let rating: String
     let reviewerCountry: String
     let reviewerName: String
     let review_id: Int
     let title: String
     let traveler_type: String
-    
-    var author: String {
-        get {
-            return reviewerName + " - " + reviewerCountry
-        }
-    }
-    
-    var foreignLanguage: Bool {
-        get {
-            return languageCode != "en"
-        }
-    }
 }

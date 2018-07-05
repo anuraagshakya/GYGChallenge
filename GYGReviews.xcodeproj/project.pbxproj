@@ -16,6 +16,8 @@
 		CE1D460220EE270400D5ABEA /* Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1D460120EE270400D5ABEA /* Review.swift */; };
 		CE1D460620EE2C1700D5ABEA /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1D460520EE2C1700D5ABEA /* DetailViewController.swift */; };
 		CE1D460820EE2C7200D5ABEA /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1D460720EE2C7200D5ABEA /* ListViewModel.swift */; };
+		CE1D460A20EE3CA500D5ABEA /* RequestCriteria.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1D460920EE3CA500D5ABEA /* RequestCriteria.swift */; };
+		CE40294D20EE550000645396 /* ListViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE40294C20EE550000645396 /* ListViewDataSource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		CE1D460120EE270400D5ABEA /* Review.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Review.swift; sourceTree = "<group>"; };
 		CE1D460520EE2C1700D5ABEA /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		CE1D460720EE2C7200D5ABEA /* ListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModel.swift; sourceTree = "<group>"; };
+		CE1D460920EE3CA500D5ABEA /* RequestCriteria.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestCriteria.swift; sourceTree = "<group>"; };
+		CE40294C20EE550000645396 /* ListViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewDataSource.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +104,7 @@
 			isa = PBXGroup;
 			children = (
 				CE1D460120EE270400D5ABEA /* Review.swift */,
+				CE1D460920EE3CA500D5ABEA /* RequestCriteria.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -117,6 +122,7 @@
 			isa = PBXGroup;
 			children = (
 				CE1D460720EE2C7200D5ABEA /* ListViewModel.swift */,
+				CE40294C20EE550000645396 /* ListViewDataSource.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -236,8 +242,10 @@
 				CE1D460820EE2C7200D5ABEA /* ListViewModel.swift in Sources */,
 				CE1D45F120EE211800D5ABEA /* ListViewController.swift in Sources */,
 				CE1D45EF20EE211800D5ABEA /* AppDelegate.swift in Sources */,
+				CE1D460A20EE3CA500D5ABEA /* RequestCriteria.swift in Sources */,
 				CE1D460220EE270400D5ABEA /* Review.swift in Sources */,
 				CE1D460620EE2C1700D5ABEA /* DetailViewController.swift in Sources */,
+				CE40294D20EE550000645396 /* ListViewDataSource.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
