@@ -20,29 +20,35 @@ class SettingsViewController: UIViewController {
     @IBOutlet weak var sortOrderSegment: UISegmentedControl!
     @IBOutlet weak var fliterRuleSegment: UISegmentedControl!
     @IBOutlet weak var filterValueSegment: UISegmentedControl!
+    @IBOutlet weak var filterSwitch: UISwitch!
     
     @IBAction func applySettingsPressed(_ sender: Any) {
         let maxString = numberText.text ?? ""
         let maxNumber = Int(maxString) ?? 0
         
-        let filterRuleString = fliterRuleSegment.titleForSegment(at: fliterRuleSegment.selectedSegmentIndex)
-        var filterRule: FilterRule
-        switch filterRuleString {
-        case "<":
-            filterRule = .LesserThan
-        case "<=":
-            filterRule = .LesserThanEquals
-        case "=":
-            filterRule = .Equals
-        case ">=":
-            filterRule = .GreaterThanEquals
-        default:
-            filterRule = .GreaterThan
+        var filter: Filter
+        if (filterSwitch.isOn) {
+            let filterRuleString = fliterRuleSegment.titleForSegment(at: fliterRuleSegment.selectedSegmentIndex)
+            var filterRule: FilterRule
+            switch filterRuleString {
+            case "<":
+                filterRule = .LesserThan
+            case "<=":
+                filterRule = .LesserThanEquals
+            case "=":
+                filterRule = .Equals
+            case ">=":
+                filterRule = .GreaterThanEquals
+            default:
+                filterRule = .GreaterThan
+            }
+            filter = Filter(
+                criteria: .Rating,
+                rule: filterRule,
+                value: String(describing: filterValueSegment.selectedSegmentIndex + 1))
+        } else {
+            filter = Filter(criteria: .Rating, rule: .Equals, value: "0")
         }
-        let filter = Filter(
-            criteria: .Rating,
-            rule: filterRule,
-            value: String(describing: filterValueSegment.selectedSegmentIndex + 1))
         
         let sortCriteriaString = sortCriteriaSegment.titleForSegment(at: sortCriteriaSegment.selectedSegmentIndex)
         let sortOrderString = sortOrderSegment.titleForSegment(at: sortOrderSegment.selectedSegmentIndex)

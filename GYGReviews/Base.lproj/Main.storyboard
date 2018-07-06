@@ -261,11 +261,19 @@ fit?</string>
                                     <action selector="applySettingsPressed:" destination="Xdn-IQ-H6W" eventType="touchUpInside" id="305-Yz-CIX"/>
                                 </connections>
                             </button>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fRv-xD-XWq">
+                                <rect key="frame" x="313" y="257" width="49" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="onFilterSwitched:" destination="Xdn-IQ-H6W" eventType="valueChanged" id="QfN-Kv-f6J"/>
+                                </connections>
+                            </switch>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="Pae-Tu-VhI"/>
                     </view>
                     <connections>
+                        <outlet property="filterSwitch" destination="fRv-xD-XWq" id="nwa-l9-QCF"/>
                         <outlet property="filterValueSegment" destination="F5p-TZ-zDV" id="Ykt-va-hsc"/>
                         <outlet property="fliterRuleSegment" destination="ZSj-M8-aaQ" id="Phw-8b-wwY"/>
                         <outlet property="numberText" destination="V9U-sH-zWv" id="9qu-Ld-0P2"/>
