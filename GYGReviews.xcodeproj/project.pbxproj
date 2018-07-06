@@ -21,6 +21,7 @@
 		CE40295120EE74A900645396 /* NewReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE40295020EE74A900645396 /* NewReviewViewController.swift */; };
 		CE40295320EE874800645396 /* NewReviewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE40295220EE874800645396 /* NewReviewViewModel.swift */; };
 		CE40295920EF6B1B00645396 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE40295820EF6B1B00645396 /* SettingsViewController.swift */; };
+		CE6EBCFD20EF894100548CFF /* ViewController (Extension).swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6EBCFC20EF894100548CFF /* ViewController (Extension).swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		CE40295020EE74A900645396 /* NewReviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewReviewViewController.swift; sourceTree = "<group>"; };
 		CE40295220EE874800645396 /* NewReviewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewReviewViewModel.swift; sourceTree = "<group>"; };
 		CE40295820EF6B1B00645396 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		CE6EBCFC20EF894100548CFF /* ViewController (Extension).swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController (Extension).swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +124,7 @@
 				CE40294E20EE66DB00645396 /* ReviewCell.swift */,
 				CE40295020EE74A900645396 /* NewReviewViewController.swift */,
 				CE40295820EF6B1B00645396 /* SettingsViewController.swift */,
+				CE6EBCFC20EF894100548CFF /* ViewController (Extension).swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -257,6 +260,7 @@
 				CE1D460A20EE3CA500D5ABEA /* RequestCriteria.swift in Sources */,
 				CE1D460220EE270400D5ABEA /* Review.swift in Sources */,
 				CE40294D20EE550000645396 /* ListViewDataSource.swift in Sources */,
+				CE6EBCFD20EF894100548CFF /* ViewController (Extension).swift in Sources */,
 				CE40294F20EE66DB00645396 /* ReviewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

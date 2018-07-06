@@ -21,6 +21,9 @@ class NewReviewViewController: UIViewController {
 
         // Instantiate the view model
         viewModel = NewReviewViewModel()
+        
+        // Add tap gesture recongnizer to close keyboard when tapped around
+        hideKeyboardWhenTappedAround()
     }
     
     @IBAction func submitPressed(_ sender: Any) {
