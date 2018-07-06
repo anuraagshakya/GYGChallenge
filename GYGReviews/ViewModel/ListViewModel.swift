@@ -17,10 +17,13 @@ class ListViewModel {
     }
     
     public func fetchReviews(max: Int = 20, withFilter: Filter? = nil, sortedBy: Sort = Sort(criteria: .ReviewDate, order: .Descending)) {
+        // Init urlString with the base URL for reviews
         var urlString = "https://www.getyourguide.com/berlin-l17/tempelhof-2-hour-airport-history-tour-berlin-airlift-more-t23776/reviews.json?"
         
+        // Concatenate the count of reviews to fetch
         urlString += "count=" + String(describing: max) + "&"
         
+        // Setup the filter
         if let filter = withFilter {
             if let filterString = filter.filterString() {
                 urlString += filterString + "&"
@@ -28,12 +31,16 @@ class ListViewModel {
                 print("Invalid Filter, skipping")
             }
         }
+        
+        // Setup sort criteria and order
         if let sortString = sortedBy.sortString() {
             urlString += sortString
         } else {
             print("Invalid Sort, skipping")
         }
         
+        // Create URL and dispatch in background queue. We read the contents of
+        //  the response on success and parse it. Else log error.
         if let url = URL(string: urlString) {
             DispatchQueue.global(qos: .userInitiated).async { [unowned self] in
                 if let data = try? String(contentsOf: url) {
@@ -51,6 +58,8 @@ class ListViewModel {
     }
     
     private func parse(json: JSON) {
+        // This method parses the results of our request into an array of
+        //  Reviews. This is then set as the data for our dataSource
         var data = [Review]()
         for dataPoint in json["data"].arrayValue {
             let author = dataPoint["author"].stringValue
