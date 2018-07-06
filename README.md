@@ -20,5 +20,10 @@ brew install cocoapods
 ```
 
 ## Miscelleneous Notes
-- 
+- You will notice that in the edit view (where the user selects filters and sorting options), there is the possiblity to implement more filters if there were more information about the API. For the moment, however, only filtering on a particular rating is possible.
+
+## TODOs
+- On tapping a review, it is displayed in a new, full screen
+- Better error notification to user
+- Unit testing 
 

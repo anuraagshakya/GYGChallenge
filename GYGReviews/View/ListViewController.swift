@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ListViewController: UITableViewController {
+class ListViewController: UITableViewController, SettingsViewControllerDelegate {
     var dataSource = ListViewDataSource()
     var viewModel: ListViewModel!
     
@@ -33,7 +33,10 @@ class ListViewController: UITableViewController {
         // Add button to the right corner of the navigation bar. This bar will
         //  be of BarButtonSystemItem.add type which will be displayes as a "+".
         //  When pressed, it calls `addReviewPressed` method
-        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addReviewPressed))
+        navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .compose, target: self, action: #selector(addReviewPressed))
+        
+        //
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .edit, target: self, action: #selector(showSettingsView))
         
         // Finally, we call the `fetchReviews` method of our view model. This
         //  will update the data array in our data source.
@@ -47,6 +50,17 @@ class ListViewController: UITableViewController {
         let view = storyboard?.instantiateViewController(withIdentifier: "newReview") as! NewReviewViewController
         view.title = "Submit a Review"
         navigationController?.pushViewController(view, animated: true)
+    }
+    
+    @objc func showSettingsView() {
+        let settingsView = storyboard?.instantiateViewController(withIdentifier: "settingsView") as! SettingsViewController
+        settingsView.delegate = self
+        navigationController?.pushViewController(settingsView, animated: true)
+    }
+    
+    // MARK: SettingsViewControllerDelegate
+    func reviewListSettingsApplied(withMaxNumber: Int, filter: Filter, sort: Sort) {
+        viewModel.fetchReviews(max: withMaxNumber, withFilter: filter, sortedBy: sort)
     }
 }
 
