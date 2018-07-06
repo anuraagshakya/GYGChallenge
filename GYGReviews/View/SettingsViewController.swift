@@ -9,6 +9,8 @@
 import UIKit
 
 protocol SettingsViewControllerDelegate: class {
+    // Protocol to inform the delegate that the user has chosen to apply some
+    //  settings and what they are
     func reviewListSettingsApplied(withMaxNumber: Int, filter: Filter, sort: Sort)
 }
 
@@ -23,9 +25,15 @@ class SettingsViewController: UIViewController {
     @IBOutlet weak var filterSwitch: UISwitch!
     
     @IBAction func applySettingsPressed(_ sender: Any) {
-        let maxString = numberText.text ?? ""
-        let maxNumber = Int(maxString) ?? 0
+        // When the apply button is pressed, the settings are read and passed
+        //  to its delegate object.
         
+        // Find the max number of review to display. If there was no input, the
+        //  max is set to 20 which is default
+        let maxString = numberText.text ?? ""
+        let maxNumber = Int(maxString) ?? 20
+        
+        // Set the filter on rating criteria if the filter switch is toggled on
         var filter: Filter
         if (filterSwitch.isOn) {
             let filterRuleString = fliterRuleSegment.titleForSegment(at: fliterRuleSegment.selectedSegmentIndex)
@@ -47,17 +55,22 @@ class SettingsViewController: UIViewController {
                 rule: filterRule,
                 value: String(describing: filterValueSegment.selectedSegmentIndex + 1))
         } else {
+            // Else filter is on (rating=0), i.e., no filter
             filter = Filter(criteria: .Rating, rule: .Equals, value: "0")
         }
         
+        
+        // Setup the sort based on increasing/decreasing rating/review date
         let sortCriteriaString = sortCriteriaSegment.titleForSegment(at: sortCriteriaSegment.selectedSegmentIndex)
         let sortOrderString = sortOrderSegment.titleForSegment(at: sortOrderSegment.selectedSegmentIndex)
         let sort = Sort(
             criteria: sortCriteriaString == "Rating" ? .Rating : .ReviewDate,
             order: sortOrderString == "Ascending" ? .Ascending : .Descending)
         
+        // Inform the delegate of users choices
         self.delegate?.reviewListSettingsApplied(withMaxNumber: maxNumber, filter: filter, sort: sort)
         
+        // Dissmiss self from navigation controller
         _ = navigationController?.popViewController(animated: true)
     }
     

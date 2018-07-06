@@ -53,6 +53,10 @@ class ListViewController: UITableViewController, SettingsViewControllerDelegate 
     }
     
     @objc func showSettingsView() {
+        // This method instantiates, configures and pushes onto the navigation
+        //  controller a view controller designed to edit the list of reviews
+        //  the user sees. We also implement the delegate method for this view
+        //  controller as it does not have its own view model.
         let settingsView = storyboard?.instantiateViewController(withIdentifier: "settingsView") as! SettingsViewController
         settingsView.delegate = self
         navigationController?.pushViewController(settingsView, animated: true)
