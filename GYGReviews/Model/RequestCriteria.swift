@@ -10,11 +10,11 @@ import Foundation
 
 // Sort
 enum SortOrder {
-    case Ascending, Descending
+    case Descending, Ascending
 }
 
 enum SortCriteria {
-    case Rating, ReviewDate
+    case ReviewDate, Rating
 }
 
 struct Sort {
@@ -31,6 +31,14 @@ struct Sort {
             output += "date_of_review"
         }
         
+        output += "&direction="
+        switch order {
+        case .Ascending:
+            output += "ASC"
+        case .Descending:
+            output += "DESC"
+        }
+        
         return output
     }
 }
@@ -40,7 +48,7 @@ enum FilterCriteria {
     case Rating, ReviewDate
 }
 enum FilterRule {
-    case Equals, GreaterThan, LesserThan, GreaterThanEquals, LesserThanEquals
+    case LesserThan, LesserThanEquals, Equals, GreaterThanEquals, GreaterThan
 }
 struct Filter {
     let criteria: FilterCriteria
