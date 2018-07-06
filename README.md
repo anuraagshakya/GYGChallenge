@@ -26,4 +26,5 @@ brew install cocoapods
 - On tapping a review, it is displayed in a new, full screen
 - Better error notification to user
 - Unit testing 
-
+- Factor out network request configurations to another class
+- Implement more sort and filter criteria
