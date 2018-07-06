@@ -21,6 +21,7 @@ brew install cocoapods
 
 ## Miscelleneous Notes
 - You will notice that in the edit view (where the user selects filters and sorting options), there is the possiblity to implement more filters if there were more information about the API. For the moment, however, only filtering on a particular rating is possible.
+- The app works when the device is not connected to the internet also, however, it does not store any information from the previous session so the display will be empty on a fresh start.
 
 ## TODOs
 - On tapping a review, it is displayed in a new, full screen
